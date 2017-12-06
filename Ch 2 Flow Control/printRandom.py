@@ -6,7 +6,7 @@ guess = input()
 while True:
     if i == 50:
         print('You exceeded 50 guesses and did not match the random number!')
-        break;
+        break
     num = random.randint(1, 50)
     print(num)
     i += 1
