@@ -5,13 +5,21 @@
 # py.exe mcb.pyw list - Loads all keywords to clipboard.
 
 
-import shelve, pyperclip, sys
+import shelve, pyperclip, sys, os
 
 mcbShelf = shelve.open('mcb')
 
 # Save clipboard content.
 if len(sys.argv) == 3 and sys.argv[1].lower() == 'save':
     mcbShelf[sys.argv[2]] = pyperclip.paste()
+elif len(sys.argv) == 3 and sys.argv[1].lower() == 'delete':
+    del mcbShelf[sys.argv[2]]
+elif len(sys.argv) == 2 and sys.argv[1].lower() == 'deleteall':
+    mcbShelf.clear()
+    mcbShelf.close()
+    os.remove('mcb.bak')
+    os.remove('mcb.dat')
+    os.remove('mcb.dir')
 elif len(sys.argv) == 2:
     # List keywords and load content.
     if sys.argv[1].lower() == 'list':
