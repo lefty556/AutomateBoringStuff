@@ -4,12 +4,13 @@
 # their own text anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB
 # appears in the text file.
 
+# TODO:  Add ability to read file from command line arguments
+
 import os, sys, re
 
 if os.path.exists('madlibs.txt'):
     with open('madlibs.txt', 'r') as sourceFile:
-        text = str(sourceFile.read())
-#        print(text)
+        text = sourceFile.read()
 else:
     sys.exit('Source File not found, please create')
 
