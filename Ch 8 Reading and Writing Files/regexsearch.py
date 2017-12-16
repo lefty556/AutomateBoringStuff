@@ -18,7 +18,6 @@ def main(argv):
         usage()
         sys.exit(1)
     folder = argv[0]
-    print(folder)
     if not os.path.exists(folder):
         sys.exit('Please enter a valid folder/directory')
 
