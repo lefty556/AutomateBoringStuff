@@ -1,9 +1,9 @@
 #! /usr/bin/python
 
 # This program checks for any failure to uncompress guide files
-# downloaded from Gracenote's ftp site
+# downloaded the ftp site
 # The script sshs into mbo-05 and checks the GuideManager logs
-# for any server in mbo-05.txt
+#
 
 import subprocess
 import os
