@@ -7,7 +7,7 @@
 #
 # Usage:  ./guidecheck.py
 
-# Version 1.0 - Coded by Brian Gizelar
+# Version 1.0 - Coded by Brian G
 #
 #   Changelog:
 #
