@@ -12,7 +12,7 @@ def sizeof_fmt(num, suffix='B'):
     return "%.1f%s%s" % (num, 'Yi', suffix)
 
 
-totalsize = 0;
+totalsize = 0
 maxsize = 1024 * 1024 * 500   # files over 500 MB
 
 print('Printing files over {}:'.format(sizeof_fmt(maxsize)))
